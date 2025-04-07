@@ -6,8 +6,9 @@ const movies = require("./Model/movies");
 const connect = async () => {
     try {
         await connectDB(process.env.MONGODB_URL);
-        await movies.create(movieJson);
         await movies.deleteMany();
+        await movies.create(movieJson);
+        
         console.log("success");
     }
     catch (error) {
