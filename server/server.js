@@ -15,6 +15,7 @@ const port = process.env.PORT || 4000;
 app.use(cors(
 ));
 app.use(express.json());
+// trial
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('*', (req, res) => {
