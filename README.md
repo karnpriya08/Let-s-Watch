@@ -5,14 +5,7 @@ A brief description of what this project does and who it's for
 A movie-ticket booking application made using MERN Stack.
 using this application you can book select your movie, slot for that movie , seat prefrence and number of seats.
 user can book a movie show with this website.
-## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
 ## Features
 

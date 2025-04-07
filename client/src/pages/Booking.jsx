@@ -8,7 +8,7 @@ const Booking = () => {
   // fetch lastbooking details 
     const getLastBooking = async () => {
         try {
-            const response = await Axios.get("http://localhost:8080/api/bookings");
+            const response = await Axios.get("https://let-s-watch-backend.onrender.com/api/bookings");
             if (response.data && response.data.lastBooking) {
                 setLastbooking(response.data.lastBooking);
             }

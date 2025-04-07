@@ -17,7 +17,7 @@ const index = () => {
 // getting all movies to display 
     const getMovies = async () => {
         try {
-            const res = await Axios.get("http://localhost:8080/api/movies");
+            const res = await Axios.get("https://let-s-watch-backend.onrender.com/api/movies");
             if (res.data) {
                 setMovies(res.data.moviesData)
             }
@@ -31,7 +31,7 @@ const index = () => {
     // function to get lastbooking
     const getLastBooking = async () => {
         try {
-            const response = await Axios.get("http://localhost:8080/api/bookings");
+            const response = await Axios.get("https://let-s-watch-backend.onrender.com/api/bookings");
             if (response.data.lastBooking) {
                 setLastbooking(response.data.lastBooking);
                 localStorage.setItem('bookings', JSON.stringify(response.data.lastBooking));
@@ -59,7 +59,7 @@ const index = () => {
         }
 // post method to submit details
         try {
-            const res = (await Axios.post("http://localhost:8080/api/bookings", data));
+            const res = (await Axios.post("https://let-s-watch-backend.onrender.com/api/bookings", data));
             alert("Booking successful!");
             //  clearing data   
                setMovie("");
