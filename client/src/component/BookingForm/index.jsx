@@ -23,7 +23,7 @@ const index = () => {
             }
         }
         catch (error) {
-            console.log(error);
+            console.log(error)
         }
 
     }
@@ -48,19 +48,34 @@ const index = () => {
     // handle form submission 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        // console.log("submitted");
-        // console.log(movie,seats,slot,quantity);
-        // console.log(lastbooking);
         
+        if(movie=== " "){
+            alert ("select any movie")
+            return;
+        }
+       if(!slot){
+        alert("select slot")
+        return;
+       }
+       if(Object.keys(seats).length === 0 ){
+        alert("select seat")
+        return;
+       }
         const data = {
             movie,
             slot,
             seats
         }
+        
+        
 // post method to submit details
         try {
             const res = (await Axios.post("https://let-s-watch-backend.onrender.com/api/bookings", data));
-            alert("Booking successful!");
+                    
+                    alert("Booking successful!");
+            
+        
+            
             //  clearing data   
                setMovie("");
                 setSlot("");
@@ -117,6 +132,7 @@ const handleQuantityChange = (e, seat) => {
                                 onClick={() => {
                                         const mov = item.name;
                                         setMovie(mov);
+
                                     }}
                                 >
                                     <div>
