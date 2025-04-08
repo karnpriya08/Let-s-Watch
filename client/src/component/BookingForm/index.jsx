@@ -7,7 +7,7 @@ import LastBooking from '../LastBooking';
 const index = () => {
     
     const [movies, setMovies] = useState([]);
-    const [movie, setMovie] = useState(localStorage.getItem("movie") || " ")
+    const [movie, setMovie] = useState( " ")
     const [slot, setSlot] = useState(localStorage.getItem("slot") || "");
     const [seats, setSeats] = useState(JSON.parse(localStorage.getItem("seats")) || {});
     const [quantity, setQuantity] = useState(0);
