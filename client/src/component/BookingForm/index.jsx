@@ -219,7 +219,7 @@ const index = ({ onSelectionChange }) => {
 
                 </div>
                 {/* button to submit form /booking selection */}
-                <button className='bgc  border border-black rounded-xl p-4 px-30 text-xl my-5 hover:scale-105  cursor-pointer transition-colors'
+                <button className='bgc  border border-black rounded-xl p-4 px-30 text-xl my-5 hover:scale-105  cursor-pointer transition-colors sm:mx-8 md:mx-45 lg:mx-110'
                     onClick={handleSubmit} >
                     Book Show
                 </button>
